@@ -1,9 +1,4 @@
-FROM ocdr/d3cicd_base:0.1.0
+FROM lucifer001/aswinpalaniappa-dkube-cicd-example-my-image1:ef442cfc578950b408e485fed2b410d955c8df32
 
 ADD conda_env.yaml .
-RUN conda env create -f conda_env.yaml && \
-    conda clean -afy && conda init bash && \
-    echo "source activate dkube-env" > ~/.bashrc
-
-RUN touch /built_using_dockerfile
 ENV PATH=/opt/conda/envs/dkube-env/bin:$PATH
