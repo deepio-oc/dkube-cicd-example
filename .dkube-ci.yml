@@ -1,5 +1,6 @@
-jobs: # 
-  path: jobs
-  jobs:
-    - name: train.yaml #jobs/train.yaml contains job configuration
-      run: true # run the job. 
+pipelines:
+  path: kubeflow/pipeline
+  user: ocdkube
+  pipelines:
+    - name: workflow.py
+      run: true
